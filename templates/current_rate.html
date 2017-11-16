@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="ol-sm-12 col-md-12 h1div">
+        <h1>USD rate: {{rate}}</h1>
+    </div>
+    {% for order in stock_exchange.orders %}
+        <p> {{order}} </p>
+    {% end %}
+{% end %}

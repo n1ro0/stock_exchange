@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Exchange</title>
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+    <script src="static/jquery-3.2.1.js"></script>
+    <script src="static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="static/js/navigations.js"></script>
+
+    <link rel="stylesheet" href="static/styles/basestyles.css"/>
+
+</head>
+<body>
+    {% block header %}
+
+        <header >
+            <lable>Welcome, User. </lable>
+                <a href="#"><span class="glyphicon glyphicon-user"></span></a>
+                <a href="#"><span class="glyphicon glyphicon-log-out"></span></a>
+
+         </header>
+    {% end %}
+
+
+
+    <nav class="navbar navbar-inverse">
+    {% block nav %}
+        <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="/">Main <span class="badge"></span></a></li>
+              <li role="presentation"><a href="/delete/">Make order <span class="badge"></span></a></li>
+              <li role="presentation"><a href="/owners/">Check order <span class="badge"></span></a></li>
+        </ul>
+    {% end %}
+    </nav>
+    <article>
+    {% block content %}
+    {% end %}
+    </article>
+
+        {% block footer %}
+
+             <footer class="col-md-12 footer">
+                &copy; 2017 Stock Exchange Place. All rights reserved.
+             </footer>
+
+        {% end %}
+</body>
+</html>
